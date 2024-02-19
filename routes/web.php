@@ -71,3 +71,9 @@ Route::get('/admin/pengembalian', function () {
 Route::get('/admin/pengembalian/create', function () {
     return view('admin.create_data_pengembalian');
 });
+Route::get('/admin/buku/edit', function () {
+    return view('admin.edit_buku');
+});
+Route::get('/peminjam/koleksi_buku', function () {
+    return view('peminjam.koleksi_buku');
+});

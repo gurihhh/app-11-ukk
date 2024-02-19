@@ -45,14 +45,14 @@
                 <li class="sidebar-title">Menu</li>
 
                 <li class="sidebar-item active ">
-                    <a href="index.html" class='sidebar-link'>
+                    <a href="{{ url('peminjam/dashboard') }}" class='sidebar-link'>
                         <i class="bi bi-grid-fill"></i>
                         <span>Dashboard</span>
                     </a>
 
 
                 </li>
-                <li class="sidebar-title">Admin</li>
+                <li class="sidebar-title">Peminjam</li>
 
                 <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
@@ -72,7 +72,7 @@
 
                         </li>
                         <li class="submenu-item  ">
-                            <a href="ui-widgets-pricing.html" class="submenu-link">Koleksi buku</a>
+                            <a href="{{ url('peminjam/koleksi_buku') }}" class="submenu-link">Koleksi buku</a>
 
                         </li>
                     </ul>
@@ -89,7 +89,7 @@
 
                 </li>
                 <li class="sidebar-item">
-                    <a href="index.html" class='sidebar-link'>
+                    <a href="{{ url('peminjam/landing-page') }}" class='sidebar-link'>
                         <i class="bi bi-grid-fill"></i>
                         <span>Logout</span>
                     </a>

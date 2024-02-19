@@ -36,26 +36,28 @@
                         <table class="table table-striped" id="table2">
                             <thead>
                                 <tr>
-                                    <th>Username</th>
-                                    <th>Password</th>
-                                    <th>Email</th>
-                                    <th>Nama</th>
-                                    <th>No telp</th>
-                                    <th>Alamat</th>
+                                    <th>id buku</th>
+                                    <th>id kategori</th>
+                                    <th>judul buku</th>
+                                    <th>penulis</th>
+                                    <th>penerbit</th>
+                                    <th>tahun terbit</th>
+                                    <th>stok</th>
                                     <th>Aksi</th>
 
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Emmanuel</td>
-                                    <td>121313</td>
-                                    <td>eget.lacus.Mauris@feugiatSednec.org</td>
+                                    <td>061</td>
+                                    <td>0061</td>
+                                    <td>kams</td>
                                     <td>Shanti</td>
                                     <td>(016977) 8208</td>
-                                    <td>puri megah</td>
+                                    <td>2023</td>
+                                    <td>2</td>
                                     <td>
-                                        <a href="{{ url('admin/user/edit') }}" class="btn btn-primary">Edit</a>
+                                        <a href="{{ url('admin/buku/edit') }}" class="btn btn-primary">Edit</a>
                                         <a href="delete_user.html" class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>
