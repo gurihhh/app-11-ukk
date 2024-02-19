@@ -20,7 +20,7 @@ Route::get('/login', function () {
     return view('auth.login');
 });
 Route::get('/register', function () {
-    return view('register');
+    return view('auth.register');
 });
 
 Route::get('/admin/dashboard', function () {
@@ -77,3 +77,8 @@ Route::get('/admin/buku/edit', function () {
 Route::get('/peminjam/koleksi_buku', function () {
     return view('peminjam.koleksi_buku');
 });
+Route::get('/peminjam/detail_buku', function () {
+    return view('peminjam.detail_buku');
+});
+Route::get('/register', [\App\Http\Controllers\RegisterController::class, 'create'])->name('register');
+Route::post('/register', [\App\Http\Controllers\RegisterController::class, 'store'])->name('register');

@@ -75,6 +75,11 @@
                             <a href="{{ url('peminjam/koleksi_buku') }}" class="submenu-link">Koleksi buku</a>
 
                         </li>
+
+                        <li class="submenu-item  ">
+                            <a href="{{ url('peminjam/detail_buku') }}" class="submenu-link">Detail buku</a>
+
+                        </li>
                     </ul>
 
 
