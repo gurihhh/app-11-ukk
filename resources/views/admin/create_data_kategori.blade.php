@@ -26,7 +26,7 @@
         <section class="section">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Create Data Kategori</h4>
+                    <h4 class="card-title">Tambah Data Kategori</h4>
                 </div>
 
                 <div class="card-body">

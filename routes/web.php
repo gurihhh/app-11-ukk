@@ -80,5 +80,8 @@ Route::get('/peminjam/koleksi_buku', function () {
 Route::get('/peminjam/detail_buku', function () {
     return view('peminjam.detail_buku');
 });
+Route::get('/petugas/dashboardpet', function () {
+    return view('petugas.dashboardpet');
+});
 Route::get('/register', [\App\Http\Controllers\RegisterController::class, 'create'])->name('register');
 Route::post('/register', [\App\Http\Controllers\RegisterController::class, 'store'])->name('register');

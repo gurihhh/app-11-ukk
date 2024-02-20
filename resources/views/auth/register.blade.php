@@ -10,15 +10,17 @@
     <title>Register</title>
 </head>
 <body>
-<div class="container-sm">
-    <div class="card">
-        <div class="card-body">
+    <body style="background-color: #739072">
+        <div class="container">
+            <div class="card position-absolute top-50 start-50 translate-middle rounded"
+                style="width: 25rem; height: 19rem; border-radius: 17px">
+                <div class="card-body" style="background-color: #f4f7f2;">
             <form action="" method="post">
                 @csrf
                 <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
+                    <label for="name" class="form-label">Nama</label>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
-                           name="name" placeholder="Your name" value="{{ old('name') }}">
+                           name="name" placeholder="Nama Kamu" value="{{ old('name') }}">
                     @error('name')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -28,7 +30,7 @@
                 <div class="mb-3">
                     <label for="email" class="form-label">Email address</label>
                     <input type="email" class="form-control @error('email') is-invalid @enderror" id="email"
-                           name="email" placeholder="name@example.com" value="{{ old('email') }}">
+                           name="email" placeholder="example@gmail.com" value="{{ old('email') }}">
                     @error('email')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -45,7 +47,7 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="password_confirmation" class="form-label">Password Confirmation</label>
+                    <label for="password_confirmation" class="form-label">Konfirmasi Password</label>
                     <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" id="password_confirmation" name="password_confirmation"
                            placeholder="password">
                     @error('password_confirmation')
@@ -54,8 +56,8 @@
                     </div>
                     @enderror
                 </div>
-                <div class="mb-3">
-                    <input type="submit" class="btn btn-primary" value="Register">
+                <div class="d-flex justify-content-center mb-3">
+                    <input type="submit" class="btn btn-secondary" value="Register">
                 </div>
             </form>
         </div>
