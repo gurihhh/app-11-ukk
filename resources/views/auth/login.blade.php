@@ -10,21 +10,26 @@
 </head>
 
 <body style="background-color: #739072">
-
+    <?php
+    if (isset($_GET['pesan'])) {
+        if ($_GET['pesan']=="gagal") {
+        echo "<div class'alert'>Username dan Password tidak sesuai !</div>";
+        }
+    }
+?>
     <div class="container">
         <div class="card position-absolute top-50 start-50 translate-middle rounded"
             style="width: 25rem; height: 19rem; border-radius: 17px">
             <div class="card-body" style="background-color: #f4f7f2;">
-                <form>
+                <form action="cek_login.php" method="post">
                     <div class="mb-3">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Email">
+                        <input type="email" class="form-control" placeholder="Email">
                     </div>
                     <div class="mb-3">
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <input type="password" class="form-control"  placeholder="Password">
                     </div>
                     <div class="d-flex justify-content-center mb-3">
-                        <a href="{{ url('/admin/dashboard') }}" class="btn btn-secondary"
+                        <a href="{{ url('/admin/dashboardad') }}" class="btn btn-secondary"
                             style="border-radius: 15px; width: 100;">Login</a>
                     </div>
                     <div>

@@ -44,8 +44,8 @@
             <ul class="menu">
                 <li class="sidebar-title">Menu</li>
 
-                <li class="sidebar-item {{ \Route::is('admin/dashboard') ? 'active' : '' }}">
-                    <a href="{{ url('admin/dashboard') }}" class='sidebar-link'>
+                <li class="sidebar-item {{ \Route::is('admin/dashboardad') ? 'active' : '' }}">
+                    <a href="{{ url('admin/dashboardad') }}" class='sidebar-link'>
                         <i class="bi bi-grid-fill"></i>
                         <span>Dashboard</span>
                     </a>
