@@ -36,32 +36,32 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="helpInputTop">id kategori</label>
-                                <input type="text" class="form-control" id="helpInputTop">
+                                <label for="basicInput">id kategori</label>
+                                <input type="text" class="form-control" id="basicInput">
                             </div>
 
                             <div class="form-group">
-                                <label for="helperText">judul buku</label>
+                                <label for="basicInput">judul buku</label>
                                 <input type="text" id="helperText" class="form-control" placeholder="judul buku">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="disabledInput">penulis</label>
-                                <input type="text" class="form-control" id="" placeholder="Name">
+                                <label for="basicInput">penulis</label>
+                                <input type="text" class="form-control" id="basicInput" placeholder="Name">
                             </div>
                             <div class="form-group">
-                                <label for="readonlyInput">penerbit</label>
-                                <input type="text" id="helperText" class="form-control" placeholder="penerbit">
+                                <label for="basicInput">penerbit</label>
+                                <input type="text" id="basicInput" class="form-control" placeholder="penerbit">
                             </div>
 
                             <div class="form-group">
-                                <label for="disabledInput">tahun terbit</label>
-                                <input type="text" class="form-control" id="" placeholder="Alamat">
+                                <label for="basicInput">tahun terbit</label>
+                                <input type="text" class="form-control" id="basicInput" placeholder="Alamat">
                             </div>
                             <div class="form-group">
-                                <label for="disabledInput">stok</label>
-                                <input type="text" class="form-control" id="" placeholder="stok">
+                                <label for="basicInput">stok</label>
+                                <input type="text" class="form-control" id="basicInput" placeholder="stok">
                             </div>
                         </div>
                     </div>
