@@ -7,7 +7,7 @@
     </header>
 
     <div class="page-heading">
-        <h3>Halo Peminjamans</h3>
+        <h3>Halo Peminjaman</h3>
     </div>
     <div class="page-content">
         <section class="row">
