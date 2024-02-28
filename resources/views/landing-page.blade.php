@@ -15,14 +15,14 @@
         rel="stylesheet">
 
     <!-- Css Styles -->
-    <link  href="{{ asset ('assets/css/bootstrap.min.css') }}" type="text/css"rel="stylesheet">
-    <link  href="{{ asset ('assets/css/font-awesome.min.css') }}" type="text/css"rel="stylesheet">
-    <link  href="{{ asset ('assets/css/elegant-icons.css') }}" type="text/css" rel="stylesheet">
-    <link  href="{{ asset ('assets/css/plyr.css') }}" type="text/css" rel="stylesheet">
-    <link  href="{{ asset ('assets/css/nice-select.css') }}" type="text/css" rel="stylesheet">
-    <link  href="{{ asset ('assets/css/owl.carousel.min.css') }}" type="text/css" rel="stylesheet">
-    <link  href="{{ asset ('assets/css/slicknav.min.css') }}" type="text/css" rel="stylesheet">
-    <link  href="{{ asset ('assets/css/style.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" type="text/css"rel="stylesheet">
+    <link href="{{ asset('assets/css/font-awesome.min.css') }}" type="text/css"rel="stylesheet">
+    <link href="{{ asset('assets/css/elegant-icons.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('assets/css/plyr.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('assets/css/nice-select.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('assets/css/owl.carousel.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('assets/css/slicknav.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" type="text/css" rel="stylesheet">
 </head>
 
 <body>
@@ -38,7 +38,7 @@
                 <div class="col-lg-2">
                     <div class="header__logo">
                         <a href="./index.html">
-                            <img src="{{asset('assets')}}/img/logo.png" alt="">
+                            <img src="{{ asset('assets') }}/img/logo.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -55,7 +55,6 @@
                                     </ul>
                                 </li>
                                 <li><a href="./blog.html">Our Blog</a></li>
-                                <li><a href="#">Contacts</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -77,7 +76,7 @@
     <section class="hero">
         <div class="container">
             <div class="hero__slider owl-carousel">
-                <div class="hero__items set-bg" data-setbg="{{asset('assets')}}/img/hero/buqu.jpg">
+                <div class="hero__items set-bg" data-setbg="{{ asset('assets') }}/img/hero/buqu.jpg">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="hero__text">
@@ -112,7 +111,7 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="footer__logo">
-                        <a href="./index.html"><img src="{{asset('assets')}}/img/logo.png" alt=""></a>
+                        <a href="./index.html"><img src="{{ asset('assets') }}/img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -121,7 +120,6 @@
                             <li class="active"><a href="./index.html">Homepage</a></li>
                             <li><a href="./categories.html">Categories</a></li>
                             <li><a href="./blog.html">Our Blog</a></li>
-                            <li><a href="#">Contacts</a></li>
                         </ul>
                     </div>
                 </div>
@@ -130,9 +128,8 @@
                         Copyright &copy;
                         <script>
                             document.write(new Date().getFullYear());
-                        </script> All rights reserved | This template is made with <i
-                            class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
-                            target="_blank">Colorlib</a>
+                        </script> All rights reserved | This template is made with <i class="fa fa-heart"
+                            aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
 
@@ -154,14 +151,14 @@
     <!-- Search model end -->
 
     <!-- Js Plugins -->
-    <script src="{{asset('assets')}}/js/jquery-3.3.1.min.js"></script>
-    <script src="{{asset('assets')}}/js/bootstrap.min.js"></script>
-    <script src="{{asset('assets')}}/js/player.js"></script>
-    <script src="{{asset('assets')}}/js/jquery.nice-select.min.js"></script>
-    <script src="{{asset('assets')}}/js/mixitup.min.js"></script>
-    <script src="{{asset('assets')}}/js/jquery.slicknav.js"></script>
-    <script src="{{asset('assets')}}/js/owl.carousel.min.js"></script>
-    <script src="{{asset('assets')}}/js/main.js"></script>
+    <script src="{{ asset('assets') }}/js/jquery-3.3.1.min.js"></script>
+    <script src="{{ asset('assets') }}/js/bootstrap.min.js"></script>
+    <script src="{{ asset('assets') }}/js/player.js"></script>
+    <script src="{{ asset('assets') }}/js/jquery.nice-select.min.js"></script>
+    <script src="{{ asset('assets') }}/js/mixitup.min.js"></script>
+    <script src="{{ asset('assets') }}/js/jquery.slicknav.js"></script>
+    <script src="{{ asset('assets') }}/js/owl.carousel.min.js"></script>
+    <script src="{{ asset('assets') }}/js/main.js"></script>
 
 
 </body>

@@ -23,11 +23,8 @@ Route::get('/register', function () {
     return view('auth.register');
 });
 
-Route::get('/admin/dashboardad', function () {
-    return view('admin.dashboardad');
-});
-Route::get('/admin/profile', function () {
-    return view('admin.profile');
+Route::get('/admin/dashboard', function () {
+    return view('admin.dashboard');
 });
 Route::get('/admin/user', function () {
     return view('admin.index_user');
@@ -41,8 +38,8 @@ Route::get('/peminjam/daftar_buku', function () {
 Route::get('/peminjam/buku_peminjam', function () {
     return view('peminjam.buku_peminjam');
 });
-Route::get('/peminjam/dashboardpem', function () {
-    return view('peminjam.dashboardpem');
+Route::get('/peminjam/dashboard', function () {
+    return view('peminjam.dashboard');
 });
 Route::get('/admin/user/edit', function () {
     return view('admin.edit_user');

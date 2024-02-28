@@ -23,10 +23,6 @@
                         Daftar Buku
                     </h5>
                 </div>
-                <div class="form-outline" data-mbd-input-init>
-                    <input type="search" id="form1" class="form-control mt-3" placeholder="Search..." aria-label="Search"/>
-                    </div>
-                    </div>
                 <div class="card-body">
                     <div class="table-responsive datatable-minimal">
                         <table class="table table-striped" id="table2">
@@ -60,7 +56,10 @@
                     </div>
                 </div>
             </div>
+    </div>
 
-        </section>
+    </div>
+
+    </section>
     </div>
 @endsection
