@@ -47,9 +47,8 @@
                         <nav class="header__menu mobile-menu">
                             <ul>
                                 <li class="active"><a href="./index.html">Homepage</a></li>
-                                <li><a href="./categories.html">Categories <span class="arrow_carrot-down"></span></a>
+                                <li><a href="./categories.html">Menu <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
-                                        <li><a href="{{ url('categories') }}">Categories</a></li>
                                         <li><a href="/login">Login</a></li>
                                         <li><a href="./register">Register</a></li>
                                     </ul>

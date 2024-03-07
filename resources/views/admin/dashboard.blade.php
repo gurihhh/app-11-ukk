@@ -7,7 +7,9 @@
     </header>
 
     <div class="page-heading">
-        <h3>halo admin</h3>
+        <h3>halo @auth
+            {{ Auth::user()->name }}
+             @endauth </h3>
     </div>
     <div class="page-content">
         <section class="row">

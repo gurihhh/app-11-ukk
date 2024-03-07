@@ -62,23 +62,23 @@
                     <ul class="submenu ">
 
                         <li class="submenu-item  ">
-                            <a href="{{ url('admin/user') }}" class="submenu-link">Data User</a>
+                            {{-- <a href="{{ route('user.index') }}" class="submenu-link">Data User</a> --}}
 
                         </li>
 
                         <li class="submenu-item  ">
-                            <a href={{ url('admin/buku') }} class="submenu-link">Data Buku</a>
+                            <a href={{ route('buku.index') }} class="submenu-link">Data Buku</a>
                         </li>
 
                         <li class="submenu-item  ">
-                            <a href={{ url('admin/kategori') }} class="submenu-link">Data Kategori</a>
+                            <a href={{ route('kategori.index') }} class="submenu-link">Data Kategori</a>
                         </li>
 
                         <li class="submenu-item  ">
                             <a href={{ url('admin/peminjaman') }} class="submenu-link">Data Pemijaman</a>
                         </li>
                         <li class="submenu-item  ">
-                            <a href={{ url('admin/pengembalian') }} class="submenu-link">Data Pengembalian</a>
+                            <a href={{ url('pengembalian') }} class="submenu-link">Data Pengembalian</a>
                         </li>
 
                     </ul>
@@ -89,12 +89,10 @@
 
                 </li>
                 <li class="sidebar-item">
-                    <a href="{{ url('login') }}" class='sidebar-link'>
+                    <a href="{{ route('logout') }}" class='sidebar-link'>
                         <i class="bi bi-grid-fill"></i>
                         <span>Logout</span>
                     </a>
-
-
                 </li>
 
             </ul>

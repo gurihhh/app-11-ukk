@@ -1,6 +1,11 @@
 <?php
 
+use App\Models\Buku;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BukuController;
+use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LogoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,16 +21,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('landing-page');
 });
-Route::get('/login', function () {
-    return view('auth.login');
-});
-Route::get('/register', function () {
-    return view('auth.register');
-});
-
-Route::get('/admin/dashboard', function () {
-    return view('admin.dashboard');
-});
 Route::get('/admin/user', function () {
     return view('admin.index_user');
 });
@@ -35,29 +30,8 @@ Route::get('/admin/user/create', function () {
 Route::get('/peminjam/daftar_buku', function () {
     return view('peminjam.daftar_buku');
 });
-Route::get('/peminjam/buku_peminjam', function () {
-    return view('peminjam.buku_peminjam');
-});
-Route::get('/peminjam/dashboard', function () {
-    return view('peminjam.dashboard');
-});
-Route::get('/admin/user/edit', function () {
-    return view('admin.edit_user');
-});
-Route::get('/admin/buku', function () {
-    return view('admin.data_buku');
-});
-Route::get('/admin/buku/create', function () {
-    return view('admin.create_data_buku');
-});
-Route::get('/admin/kategori', function () {
-    return view('admin.data_kategori');
-});
-Route::get('/admin/kategori/create', function () {
-    return view('admin.create_data_kategori');
-});
 Route::get('/admin/peminjaman', function () {
-    return view('admin.data_peminjaman');
+    return view('admin.peminjam_index');
 });
 Route::get('/admin/peminjaman/create', function () {
     return view('admin.create_data_peminjaman');
@@ -68,17 +42,26 @@ Route::get('/admin/pengembalian', function () {
 Route::get('/admin/pengembalian/create', function () {
     return view('admin.create_data_pengembalian');
 });
-Route::get('/admin/buku/edit', function () {
-    return view('admin.edit_buku');
-});
-Route::get('/peminjam/koleksi_buku', function () {
-    return view('peminjam.koleksi_buku');
-});
 Route::get('/peminjam/detail_buku', function () {
     return view('peminjam.detail_buku');
 });
 Route::get('/petugas/dashboardpet', function () {
     return view('petugas.dashboardpet');
 });
-Route::get('/register', [\App\Http\Controllers\RegisterController::class, 'create'])->name('register');
-Route::post('/register', [\App\Http\Controllers\RegisterController::class, 'store'])->name('register');
+
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [\App\Http\Controllers\LoginController::class, 'login'])->name('login');
+    Route::post('/login', [\App\Http\Controllers\LoginController::class, 'loginActon'])->name('login');
+    Route::get('/register', [\App\Http\Controllers\RegisterController::class, 'create'])->name('register');
+    Route::post('/register', [\App\Http\Controllers\RegisterController::class, 'store'])->name('register');
+});
+
+Route::middleware('auth')->group(function() {
+    Route::resource('dashboard', DashboardController::class);
+    Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
+        Route::resource('buku', BukuController::class);
+        Route::resource('kategori', KategoriController::class);
+    Route::prefix('pengaturan')->group(function () {
+        Route::resource('user', UserController::class);
+    });
+});

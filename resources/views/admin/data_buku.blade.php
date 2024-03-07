@@ -26,7 +26,7 @@
                             <h5 class="card-title">
                                 Table Buku
                             </h5>
-                            <a href="{{ url('admin/buku/create') }}" class="btn btn-primary">Tambah data</a>
+                            <a href="{{ url('buku/create') }}" class="btn btn-primary">Tambah data</a>
                         </div>
                     </div>
                     <div class="card-body">
@@ -47,40 +47,49 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-
-                                    {{--  <tr>
-                                        <td>{{ $item->iteration }}</td>
-                                        <td>{{ $item->judul }}</td>
-                                        <td>{{ $item->penulis }}</td>
-                                        <td>{{ $item->penerbit }}</td>
-                                        <td>{{ $item->tahun_terbit }}</td>
-                                        <td>
-                                            <img src="{{ Storage::url('public/buku/') . $item->gambar }}" class="rounded"
-                                                style="width: 150px">
-                                        </td>
-                                        <td>{{ $item->deskripsi }}</td>
-                                        <td>
-                                            <ul>
-                                                @foreach ($item->kategori as $category)
-                                                    <li>{{ $category->nm_kategori }}</li>
-                                                @endforeach
-                                            </ul>
-                                        </td>
-                                        <td>{{ $item->stok }}</td>
-                                        <td>
-                                            <form onsubmit="return confirm('Apakah Anda Yakin ?');"
-                                                action="{{ route('buku.destroy', $item->id) }}" method="POST">
-                                                <a href="{{ route('buku.edit', $item->id) }}"
-                                                    class="btn btn-sm btn-warning">Edit</a>
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
-                                                <a href="" class="btn btn-sm btn-primary">Lihat Ulasan</a>
-                                            </form>
-                                        </td>  --}}
-                                    </tr>
+                                    {{-- @dd($model) --}}
+                                    @foreach ($model as $item)
+                                        <tr>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $item->judul }}</td>
+                                            <td>{{ $item->penulis }}</td>
+                                            <td>{{ $item->penerbit }}</td>
+                                            <td>{{ $item->tahun_terbit }}</td>
+                                            <td>
+                                                <img src="{{ Storage::url('public/buku/') . $item->gambar }}"
+                                                    class="rounded" style="width: 150px">
+                                            </td>
+                                            <td>{{ $item->deskripsi }}</td>
+                                            <td>
+                                                @if ($item->kategori)
+                                                
+                                                    {{ $item->kategori->nm_kategori }}
+                                                @else
+                                                    [kategori di hapus]
+                                                @endif
+                                            </td>
+                                            <td>
+                                                {{-- <ul>
+                                                    @foreach ($item->kategori as $category)
+                                                        <li>{{ $category->nm_kategori }}</li>
+                                                    @endforeach
+                                                </ul> --}}
+                                            </td>
+                                            <td>{{ $item->stok }}</td>
+                                            <td>
+                                                <form onsubmit="return confirm('Apakah Anda Yakin ?');"
+                                                    action="{{ route('buku.destroy', $item->id) }}" method="POST">
+                                                    <a href="{{ route('buku.edit', $item->id) }}" class="btn btn-sm btn-warning"><i class="fa-solid fa-pen-to-square">EDIT</i></a>
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
+                            {{$model->links()  }}
                         </div>
                     </div>
                 </div>
