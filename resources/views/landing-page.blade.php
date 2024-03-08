@@ -49,12 +49,12 @@
                                 <li class="active"><a href="./index.html">Homepage</a></li>
                                 <li><a href="./categories.html">Menu <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
-                                        <li><a href="/login">Login</a></li>
-                                        <li><a href="./register">Register</a></li>
+                                        <li><a href="{{ url('/login') }}">Login</a></li>
+                                        <li><a href="{{ url('/register') }}">Register</a></li>
+                                        <li><a href="{{ url('/logout') }}">Logout</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="./blog.html">Our Blog</a></li>
-                            </ul>
+                                    </ul>
                         </nav>
                     </div>
                 </div>

@@ -59,9 +59,13 @@ Route::middleware('guest')->group(function () {
 Route::middleware('auth')->group(function() {
     Route::resource('dashboard', DashboardController::class);
     Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
+    Route::middleware('role:admin,petugas')->group(function(){
         Route::resource('buku', BukuController::class);
         Route::resource('kategori', KategoriController::class);
-    Route::prefix('pengaturan')->group(function () {
-        Route::resource('user', UserController::class);
+    });
+    Route::middleware('role:admin')->group(function(){
+        Route::prefix('pengaturan')->group(function () {
+            Route::resource('user', UserController::class);
+        });
     });
 });

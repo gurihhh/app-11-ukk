@@ -24,8 +24,8 @@ class LoginController extends Controller
                 return redirect('dashboard');
             }else if (Auth::user()->role == 'petugas') {
                 return redirect('dashboard');
-            }else if(Auth::user()->role == 'user') {
-                return redirect('');
+            }else if(Auth::user()->role == 'peminjam') {
+                return redirect('/');
             } 
         }else{
             return redirect("login");

@@ -45,7 +45,7 @@
                 <li class="sidebar-title">Menu</li>
 
                 <li class="sidebar-item {{ \Route::is('admin/dashboardad') ? 'active' : '' }}">
-                    <a href="{{ url('admin/dashboard') }}" class='sidebar-link'>
+                    <a href="{{ url('dashboard') }}" class='sidebar-link'>
                         <i class="bi bi-grid-fill"></i>
                         <span>Dashboard</span>
                     </a>
@@ -74,14 +74,8 @@
                             <a href={{ route('kategori.index') }} class="submenu-link">Data Kategori</a>
                         </li>
 
-                        <li class="submenu-item  ">
-                            <a href={{ url('admin/peminjaman') }} class="submenu-link">Data Pemijaman</a>
-                        </li>
-                        <li class="submenu-item  ">
-                            <a href={{ url('pengembalian') }} class="submenu-link">Data Pengembalian</a>
-                        </li>
-
-                    </ul>
+                    </ul
+                >
 
 
                 </li>
